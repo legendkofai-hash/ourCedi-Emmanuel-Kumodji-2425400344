@@ -1,20 +1,9 @@
-@media  screen and (max-width: 320px){
+@media screen and(max-width: 420px){
     ul{
         display: none;
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* navigation css*/
 a{
@@ -35,7 +24,47 @@ li{
     justify-content: center;
     text-align: center;
 }
-.hero{
-  
+#learnMoreBtn:hover{
+    box-shadow: 0px 0px 3px 10px #FFD100;
 }
+ 
+/* About us main content page CSS*/
 
+#aboutus-main-content{
+     background-image: none;
+     background-repeat: no-repeat;
+     background-position: fixed;
+     background-size: fit;
+     
+}
+.intro-article{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    justify-content: baseline;
+    align-items: center;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0px 0px 5px 2px #FFD100;
+    background-color: black;
+    
+}
+.para{
+    width: 50%;
+    color: #FFD100;
+    line-height: 1.5;
+    font-size: 2vw;
+}
+.headings{
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    font-weight: 400px;
+    color: #FFD100;
+}
+section{
+    font-family: 'Poppins' sans-serif;
+}
