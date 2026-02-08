@@ -1,5 +1,5 @@
-@media screen and(max-width: 420px){
-    ul{
+@media screen and (max-width: 420px){
+    ul li{
         display: none;
     }
     
@@ -48,23 +48,25 @@ li{
     align-items: center;
     border-radius: 10px;
     border-style: none;
-    box-shadow: 0px 0px 5px 2px #FFD100;
-    background-color: black;
+    box-shadow: 0px 0px 5px 2px #494848b8;
+    background-color: rgba(219, 219, 219, 0.166);
     
 }
 .para{
     width: 50%;
-    color: #FFD100;
+    color: #070707;
     line-height: 1.5;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
 }
 .headings{
     text-align: center;
     margin: auto;
     padding: 20px;
     font-weight: 400px;
-    color: #FFD100;
+    color: #88ff00;
+    font-family: 'Poppins', sans-serif;
 }
 section{
-    font-family: 'Poppins' sans-serif;
+    
 }
