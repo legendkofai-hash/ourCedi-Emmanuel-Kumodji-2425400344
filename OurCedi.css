@@ -70,3 +70,16 @@ li{
 section{
     
 }
+/* Animation */
+
+#animate{
+    animation: change-color 6s infinite;
+    font-weight: 900;
+
+}
+@keyframes change-color {
+    10% {  color: red; }
+    50% {  color: gold; }
+    100% { color: green; }
+}
+
