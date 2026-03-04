@@ -8,19 +8,19 @@
      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body style="margin: 0;">
- <div style="font-family: 'Poppins', sans-serif; font-weight: bold; text-transform: uppercase; background: no-repeat  fixed #f8f8f8; padding: 0px; margin: 0; box-shadow: 0px 3px 5px 3px #fcf000c1;  position: fixed;top: 0; width: 100%; background-size: cover; z-index: 1000;">
+ <div id="headercontainer">
 
       <!--Navigation Bar-->
 
-    <nav style="display: grid; grid-template-columns: 30% 1fr 20%; justify-content: center; align-items: center; max-width: 100%; margin: 0px; padding: 15px;"> 
-      <section style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; align-items: center;">
-         <h2 class="logo" style="font-size: 35px; margin: 0px;color: #FFD100; justify-content: center; align-items: center; color: #FFD100; text-shadow:4px 4px 2px#000000; text-transform: none;">ourCedi</h2>
+    <nav style="display: grid; grid-template-columns: 30% 1fr 20%; justify-content: center; align-items: center; max-width: 100%; margin: 0px; padding: 15px 15px 0px 15px;"> 
+      <section style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
+         <h2 class="logo" style="font-size: 55px; margin: 0px;color: #FFD100; justify-content: center; align-items: center; color: #FFD100; text-shadow:4px 4px 2px#000000; text-transform: none;">ourCedi</h2>
 
         <video src="images/3986897009-preview.mp4" autoplay loop muted width="100px" height="50px">Exhibiting the Rich Heritage of Ghana</video>
       </section>
        
 
-        <ul class="navigation" style="list-style: none; display: flex; flex-wrap: wrap; gap: 10px; font-size: 16px; justify-content: center; align-items: center; margin: auto;">
+        <ul class="navigation" style="list-style: none; display: flex; flex-wrap: wrap; gap: 30px; font-size: 16px; justify-content: center; align-items: center; margin: auto;">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="newsletter.html">Newsletter</a></li>
@@ -28,18 +28,20 @@
             <li><a href="aboutus.html" target="_self">About Us</a></li>
         </ul>
 
-        <ul class="navigation1" style="display: flex; gap: 5px; flex-wrap: wrap; list-style: none; padding-left: 2px; position: relative; left: 50px;">
+        <ul class="navigation1" style="display: flex; gap: 5px; flex-wrap: wrap; list-style: none; padding-left: 2px; position: relative; left: 40px;">
            <li><a href="contactus.html">Contact</a></li>
            <li><a href="signup.html" style="color: #ff0808;">Signup</a></li>
         </ul>
          
-         <div class="hamburger" style="display: none; flex-direction: column; cursor: pointer; position: relative; left: 50px;">
-            <span style="height: 3px; width: 25px; background-color: #111111; margin-bottom: 4px;"> </span>
-            <span style="height: 3px; width: 25px; background-color: #111111; margin-bottom: 4px;"></span>
-            <span style="height: 3px; width: 25px; background-color: #111111;"></span>
+         <div class="hamburger" style="display: none; flex-direction: column; cursor: pointer; position: relative; left: 50px;" onclick="toggleMobileMenu()">
+            <span style="height: 3px; width: 25px; background-color: #111111; margin-bottom: 4px;">|</span>
+            <span style="height: 3px; width: 25px; background-color: #111111; margin-bottom: 4px;">|</span>
+            <span style="height: 3px; width: 25px; background-color: #111111;">|</span>
+        </div>
     </nav>
    </div>
    <br><br><br><br><br>
+
    <br><br>
    <div>
     <!---History of the Cedi-->
@@ -52,8 +54,15 @@
 
         <h2 style="color: #FFD100; font-weight: 700; padding: 30px;">Etymology</h2>
         <p>
-            The word cedi is the <a href="https://en.wikipedia.org/wiki/Akan_language" style="color: blue;"><em>Akan</em></a> word for cowry shell. Cowries (plural of cowry) were formerly used as currency in what is now Ghana. The Monetaria moneta or money cowry is not native to West African waters but is a common species in the Indian Ocean. The porcelain-like shells came to West Africa, beginning in the 14th century, through trade with Arab merchants. The first modern coins exclusively used at the Gold Coast were produced in 1796 but cowries were used alongside coins and gold as currency until 1901.
+            The word cedi is the <a href="https://en.wikipedia.org/wiki/Akan_language" style="color: blue;" id="akan-link"><em>Akan</em></a> word for cowry shell. Cowries (plural of cowry) were formerly used as currency in what is now Ghana. The Monetaria moneta or money cowry is not native to West African waters but is a common species in the Indian Ocean. The porcelain-like shells came to West Africa, beginning in the 14th century, through trade with Arab merchants. The first modern coins exclusively used at the Gold Coast were produced in 1796 but cowries were used alongside coins and gold as currency until 1901.
         </p>
+        <!-- Modal structure -->
+        <div id="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 2000; justify-content: center; align-items: center;">
+            <div style="position: relative; width: 80%; height: 80%; background: #fff; border-radius: 10px; overflow: hidden;">
+                <iframe src="" id="modal-iframe" style="width: 100%; height: 100%; border: none;"></iframe>
+                <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: #ff0000; color: #fff; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">Close</button>
+            </div>
+        </div>
 
     </section>
     <br>
@@ -133,5 +142,6 @@
     </div>
        </footer>
     
+   <script src="cedi.js"></script>
    </body>
    </html>

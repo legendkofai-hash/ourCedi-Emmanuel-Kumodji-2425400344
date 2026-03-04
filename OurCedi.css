@@ -1,26 +1,14 @@
-@media screen and (max-width: 770px){
-    ul li{
-        display: none;
-    }
-    /* hamburger menu */
-.hamburger{
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: relative;
-    left: 50px;
-}
-.hamburger span{
-    height: 3px;
-    width: 25px;
-    background-color: #111111;
-    margin-bottom: 4px;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Saira', sans-serif;
+    
+    
 }
 
-.hamburger:hover span{
-    background-color: #38B000;
-    transform: scaleX(1.2);
-}
+@media screen and (max-width: 1024px){
+   
 .logo-flag{
     display: none;
 }
@@ -34,8 +22,53 @@
     background-color: #f8f8f8;
     margin: auto;
 }
+
+/* Mobile Navigation Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #111111;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+}
+}
+
+
+
+/* Show hamburger menu on smaller screens */
+@media (min-width: 1025px) {
+    
+.hamburger {
+    display: none;
+
+}
+
 }
 /* navigation css*/
+
+#headercontainer{
+    font-family: 'Saira', sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    background: no-repeat  fixed #f8f8f8;
+    padding: 0px;
+    margin: 0;
+    box-shadow: 0px 1px 10px 1px #ddddda;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: 1000;
+
+}
 a{
    text-decoration: none;
    color: black;
@@ -98,9 +131,7 @@ li{
     font-family: 'Poppins', sans-serif;
     text-decoration: underline 5px #38B000;
 }
-section{
-    
-}
+
 /* Animation */
 
 #animate{
@@ -114,4 +145,50 @@ section{
     50% {  color: gold; }
     80% { color: green; }
 }
+
+
+/* Nav link underline hover effect */
+.navigation a,
+.navigation1 a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 4px 2px;
+    transition: color .2s ease;
+}
+
+/* animated underline */
+.navigation a::after,
+.navigation1 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* distance from text */
+    height: 2px;
+    width: 100%;
+    background: #FFD100; /* underline color */
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .25s ease;
+}
+
+/* reveal on hover/focus */
+.navigation a:hover::after,
+.navigation1 a:hover::after,
+.navigation a:focus::after,
+.navigation1 a:focus::after {
+    transform: scaleX(1);
+}
+
+/* setting nav links to baseline */
+.navigation a, .navigation1 a {
+   position: relative;
+   top: 10px;
+   font-size: 30px;
+   font-weight: 400;
+}
+
+
+
+
 
